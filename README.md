@@ -5,28 +5,17 @@ This script will add, update, delete and sync domain shared contacts through bat
 
 In order to use this addon, you will have to perform the following:
 1) Create a sheet with the name EXACTLY like this – “SHARED_CONTACTS”
-2)Append the following values in the top cells (from A1 to M1):
-- First Name
-- Last Name
-- Full Name
-- Primary Email
-- Secondary Email
-- Primary Phone
-- Secondary Phone
-- City
-- Street
-- Region
-- Post code
-- Country
-- Validation
+2) Paste the following values in the top cells (from A1 to M1):
+`First Name,	Last Name,	Full Name,	Primary Email,	Secondary Email,	Primary Phone,	Secondary Phone,	City,	Street,	Region,	Post code,	Country,	Contact ID URI,	Action,	Result`
 
-You can also just use the spreadsheet that we created by making a copy of it and start uploading directly into it -> https://docs.google.com/spreadsheets/d/1_8pSrlFrutZ1ro-nmRdSMfWLvRywD7BPXhgC_GeNnA0/edit#gid=2048680943
+You can also just use the spreadsheet named "template.xlsx" included in this repo.
  
 Here’s what the script does :
 * Goes through all the rows in the sheet called “SHARED_CONTACTS” (except its header)
 * Builds an XML based on the info gathered from the row based on the operation you desire
 * Sends the request to your Google Apps Domain
-* Error reporting is provided in the "validation" field
+  * Adds new contacts to the shared Google Contacts "Directory"
+* Error reporting is provided in the "action" field
  
 Notes:
 * You have to be an Administrator in your Google Apps Domain for this to work
